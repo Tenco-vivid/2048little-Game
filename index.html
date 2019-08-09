@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--移动端的自适应问题-->
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width,
+                   height=device-height,
+                   initial-scale=1.0,
+                   minimum-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no" />
+
+    <title>2048</title>
+    <!--css的样式-->
+    <link rel="stylesheet" type="text/css" href="2048.css" />
+
+    <!--逻辑，jQuery的库函数-->
+    <!--kaoo!,居然是是因为低级错误-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <!--链接在一起-->
+    <!--底层的支撑的js-->
+    <script type="text/javascript" src="support2048.js"></script>
+    <!--动画效果js-->
+    <script type="text/javascript" src="showanimation2048.js"></script>
+    <!--游戏主逻辑js-->
+    <script type="text/javascript" src="main2048.js"></script>
+</head>
+<body>
+    <!--游戏的UI部分最简单的部分-->
+    <header>
+        <!--标题，函数，按钮，ID控制-->
+        <h1>2048</h1>
+        <a href="javascript:newgame();" id="newgamebutton">New Game</a>
+        <p>score: <span id="score">0</span></p>
+    </header>
+
+    <!--两部分的屏幕自适应问题，header和棋盘 -->
+
+    <!--游戏的主体部分-->
+    <div id="grid-container"><!--十六个小格子,grid-container是网格容器的意思-->
+        <div class="grid-cell" id="grid-cell-0-0"></div><!--class，一个类别，grid-cell,网格单元-->
+        <div class="grid-cell" id="grid-cell-0-1"></div>
+        <div class="grid-cell" id="grid-cell-0-2"></div>
+        <div class="grid-cell" id="grid-cell-0-3"></div>
+
+        <div class="grid-cell" id="grid-cell-1-0"></div>
+        <div class="grid-cell" id="grid-cell-1-1"></div>
+        <div class="grid-cell" id="grid-cell-1-2"></div>
+        <div class="grid-cell" id="grid-cell-1-3"></div>
+
+        <div class="grid-cell" id="grid-cell-2-0"></div>
+        <div class="grid-cell" id="grid-cell-2-1"></div>
+        <div class="grid-cell" id="grid-cell-2-2"></div>
+        <div class="grid-cell" id="grid-cell-2-3"></div>
+
+        <div class="grid-cell" id="grid-cell-3-0"></div>
+        <div class="grid-cell" id="grid-cell-3-1"></div>
+        <div class="grid-cell" id="grid-cell-3-2"></div>
+        <div class="grid-cell" id="grid-cell-3-3"></div>
+    </div>
+</body>
+</html>
